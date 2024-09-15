@@ -6,7 +6,7 @@ The Private Messaging App is a real-time chat application designed to provide se
 
 ## Demo
 
-[Visit Demo](private-messaging-page-production.up.railway.app)
+(private-messaging-page-production.up.railway.app)
 
 
 ## Screenshots
