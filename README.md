@@ -4,6 +4,10 @@
 
 The Private Messaging App is a real-time chat application designed to provide secure and anonymous communication. Built using Node.js with Express and Socket.IO, this application ensures that users' identities and messages remain private, even from the server owner. This privacy-centric approach contrasts with the practices of large companies that might track or collect user data. Our app's design helps ensure that no one, including those with malicious intentions, can compromise your privacy.
 
+## Demo
+
+private-messaging-page-production.up.railway.app
+
 ## Screenshots
 
 
