@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Private Messaging App</title>
+    <style>
+        body {
+            font-family: 'Courier New', monospace;
+            background-color: #000;
+            color: #00ff00;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        .container {
+            flex: 1;
+            width: 80%;
+            display: flex;
+            justify-content: space-between;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .left-section, .right-section {
+            width: 20%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 10px;
+        }
+        .center-section {
+            width: 60%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 10px;
+        }
+        h1, h2 {
+            color: #00ff00;
+        }
+        .input-group {
+            margin-bottom: 15px;
+        }
+        input[type="text"] {
+            width: 150px;
+            padding: 10px;
+            margin: 5px 0;
+            background-color: #111;
+            color: #00ff00;
+            border: 1px solid #00ff00;
+        }
+        #message-input {
+            width: 600px;
+            padding: 10px;
+            margin: 5px 0;
+            background-color: #111;
+            color: #00ff00;
+            border: 1px solid #00ff00;
+        }
+        button {
+            padding: 10px 15px;
+            background-color: #222;
+            color: #00ff00;
+            border: 1px solid #00ff00;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #333;
+        }
+        #chat-section {
+            display: block;
+        }
+        #chat-log {
+            height: 500px;
+            background-color: #111;
+            color: #00ff00;
+            border: 1px solid #00ff00;
+            overflow-y: scroll;
+            padding: 10px;
+            text-align: left;
+            margin-bottom: 10px;
+        }
+        footer {
+            background-color: #111;
+            color: #00ff00;
+            text-align: center;
+            padding: 20px;
+            width: 100%;
+            position: relative;
+            bottom: 0;
+            margin-top: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Left Section: Room ID and Nickname -->
+        <div class="left-section">
+            <h2>Room Info</h2>
+            <div class="input-group">
+                <label for="random-string">Room ID</label>
+                <input type="text" id="random-string" readonly />
+                <button id="copy-btn">Copy Room ID</button>
+            </div>
+            <div class="input-group">
+                <label for="room-nickname">Your Nickname</label>
+                <input type="text" id="room-nickname" placeholder="Enter your nickname" />
+                <button id="create-room-btn">Create Room</button>
+            </div>
+        </div>
+
+        <!-- Center Section: Chat Box -->
+        <div class="center-section">
+            <h2 id="chat-room-heading">Chat - Status: <span id="room-status">Not Connected</span></h2>
+            <textarea id="chat-log" readonly></textarea>
+            <input type="text" id="message-input" placeholder="Type your message here..." />
+            <button id="send-btn">Send</button>
+        </div>
+
+        <!-- Right Section: Join Room -->
+        <div class="right-section">
+            <h2>User Info</h2>
+            <div class="input-group">
+                <label for="join-room-id">Join Another Room by ID</label>
+                <input type="text" id="join-room-id" placeholder="Enter Room ID to join" />
+                <button id="join-room-btn">Join Room</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>Private messaging app powered by Ahmad Hussain</p>
+    </footer>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
+

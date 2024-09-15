@@ -1,0 +1,74 @@
+/* Hacker terminal style */
+body {
+    background-color: black;
+    color: #00FF00;
+    font-family: "Courier New", Courier, monospace;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.terminal {
+    border: 3px solid #00FF00;
+    width: 80%;
+    max-width: 800px;
+    min-width: 300px;
+    padding: 10px;
+    box-shadow: 0 0 15px rgba(0, 255, 0, 0.5);
+}
+
+.header {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.chat-window {
+    height: 300px;
+    border: 1px solid #00FF00;
+    padding: 10px;
+    overflow-y: auto;
+    background-color: #000000;
+}
+
+.messages {
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+.input-area {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.input-box {
+    background-color: black;
+    border: 1px solid #00FF00;
+    color: #00FF00;
+    font-family: "Courier New", Courier, monospace;
+    padding: 5px;
+    margin: 5px 0;
+}
+
+.input-box::placeholder {
+    color: #00FF00;
+    opacity: 0.8;
+}
+
+#nickname-prompt, #room-id-prompt, #message-prompt {
+    margin-bottom: 5px;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #00FF00;
+}
+
+::-webkit-scrollbar-track {
+    background: #000000;
+}
