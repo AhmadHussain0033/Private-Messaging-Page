@@ -24,13 +24,14 @@ The project is organized into several key directories and files:
 
 ```
 /project-root
-  ├── /public
-  │   ├── index.html         # The main HTML file for the application
-  │   ├── app.js             # Client-side JavaScript file for handling UI and Socket.IO interactions
   ├── /server
   │   ├── index.js           # Server-side logic, handles HTTP requests and WebSocket connections
   │   ├── webrtc.js          # WebRTC-related functionality for real-time communication (if applicable)
   │   ├── redis.js           # Redis-related logic (if applicable)
+      ├── /public
+      ├── index.html         # The main HTML file for the application
+      ├── app.js             # Client-side JavaScript file for handling UI and Socket.IO interactions
+      ├── style.css             # Styles and looks of the site
   ├── package.json           # Project metadata and dependencies
   └── README.md              # This documentation file
 ```
